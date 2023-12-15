@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include cost_management *.css
+recursive-include cost_management *.csv
+recursive-include cost_management *.html
+recursive-include cost_management *.ico
+recursive-include cost_management *.js
+recursive-include cost_management *.json
+recursive-include cost_management *.md
+recursive-include cost_management *.png
+recursive-include cost_management *.py
+recursive-include cost_management *.svg
+recursive-include cost_management *.txt
+recursive-exclude cost_management *.pyc
