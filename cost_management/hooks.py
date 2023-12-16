@@ -11,8 +11,8 @@ app_license = "MIT"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/cost_management/css/cost_management.css"
-# app_include_js = "/assets/cost_management/js/cost_management.js"
+app_include_css = "/assets/cost_management/css/cost_management.css"
+app_include_js = "/assets/cost_management/js/cost_management.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/cost_management/css/cost_management.css"
@@ -29,10 +29,10 @@ app_license = "MIT"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
-# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
-# doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
-# doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
+doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
+doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
+doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
 # Home Pages
 # ----------
@@ -118,13 +118,13 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	"*": {
+		"on_update": "method",
+		"on_cancel": "method",
+		"on_trash": "method"
+	}
+}
 
 # Scheduled Tasks
 # ---------------
