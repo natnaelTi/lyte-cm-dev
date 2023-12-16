@@ -1,0 +1,237 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-12-15 13:16:17.739368",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_wqu2m",
+  "title",
+  "naming_series",
+  "tender_type",
+  "customer",
+  "project",
+  "company",
+  "column_break_7x8hx",
+  "date",
+  "enable_editing_posting_date",
+  "column_break_ljz79",
+  "required_by",
+  "section_break_1heqn",
+  "commercial_requirement",
+  "section_break_7dzis",
+  "payment_term",
+  "enquiry_document",
+  "column_break_d98a0",
+  "proposed_bill_of_quantity"
+  "status",
+  "process_lot_ticket",
+  "approved_by",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_wqu2m",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "TND-OFR-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tender_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tender Type",
+   "options": "Tender Offer Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+    "fieldname": "company",
+    "fieldtype": "Link",
+    "label": "Company",
+    "options": "Company",
+    "reqd": 1
+   },
+  {
+   "fieldname": "column_break_7x8hx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_editing_posting_date",
+   "fieldtype": "Check",
+   "label": "enable_editing_posting_date"
+  },
+  {
+   "fieldname": "column_break_ljz79",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "required_by",
+   "fieldtype": "Date",
+   "label": "Required By",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_1heqn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "commercial_requirement",
+   "fieldtype": "Table",
+   "label": "Commercial Requirement",
+   "options": "Commercial Requirement",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_7dzis",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "payment_term",
+   "fieldtype": "Link",
+   "label": "Payment Term",
+   "options": "Payment Term"
+  },
+  {
+   "fieldname": "enquiry_document",
+   "fieldtype": "Attach",
+   "label": "Enquiry Document"
+  },
+  {
+   "fieldname": "column_break_d98a0",
+   "fieldtype": "Column Break"
+  },
+  {
+    "fieldname": "proposed_bill_of_quantity",
+    "fieldtype": "Link",
+    "label": "Proposed Bill of Quantity",
+    "options": "Bill of Quantity"
+   },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nSubmitted\nWaiting Ticket\nProcessing Linked Documents\nOverDue",
+   "reqd": 1
+  },
+  {
+   "fieldname": "process_lot_ticket",
+   "fieldtype": "Data",
+   "label": "Process Lot Ticket"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Tender Offer",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-12-15 13:43:19.883995",
+ "modified_by": "Administrator",
+ "module": "Cost Management",
+ "name": "Tender Offer",
+ "name_case": "Title Case",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Quality Manager",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Commercial Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
