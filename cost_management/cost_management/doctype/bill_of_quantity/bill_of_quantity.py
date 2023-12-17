@@ -20,7 +20,7 @@ class BillofQuantity(SellingController):
 			self.indicator_title = "Expired"
 
 	def validate(self):
-		super(Bill of Quantity, self).validate()
+		super(BillofQuantity, self).validate()
 		self.set_status()
 		self.validate_uom_is_integer("stock_uom", "qty")
 		self.validate_valid_till()
@@ -32,6 +32,7 @@ class BillofQuantity(SellingController):
 		from erpnext.stock.doctype.packed_item.packed_item import make_packing_list
 
 		make_packing_list(self)
+
 
 	def before_submit(self):
 		self.set_has_alternative_item()
@@ -191,12 +192,13 @@ class BillofQuantity(SellingController):
 		self.update_lead()
   
 		# Update linked Tender Offer document's proposed_bill_of_quantity field
-	    frappe.db.set_value('Tender Offer', doc.linked_tender_offer, 'proposed_bill_of_quantity', doc.name)
+		frappe.db.set_value('Tender Offer', doc.linked_tender_offer, 'proposed_bill_of_quantity', doc.name)
+
 
 	def on_cancel(self):
 		if self.lost_reasons:
 			self.lost_reasons = []
-		super(Bill of Quantity, self).on_cancel()
+		super(BillofQuantity, self).on_cancel()
 
 		# update enquiry status
 		self.set_status(update=True)

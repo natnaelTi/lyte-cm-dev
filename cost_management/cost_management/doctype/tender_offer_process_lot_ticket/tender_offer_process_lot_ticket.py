@@ -7,9 +7,9 @@ import frappe
 from frappe.model.document import Document
 
 class TenderOfferProcessLotTicket(Document):
-	def on_submit(doc, method):
-    # Update linked Tender Offer document's process_lot_ticket field
-    frappe.db.set_value('Tender Offer', doc.tender_offer, 'process_lot_ticket', doc.name)
+    def on_submit(doc, method):
+        # Update linked Tender Offer document's process_lot_ticket field
+        frappe.db.set_value('Tender Offer', doc.tender_offer, 'process_lot_ticket', doc.name)
 
-    # Change status of linked Tender Offer document to "Processing Linked Documents"
-    frappe.db.set_value('Tender Offer', doc.tender_offer, 'status', 'Processing Linked Documents')
+        # Change status of linked Tender Offer document to "Processing Linked Documents"
+        frappe.db.set_value('Tender Offer', doc.tender_offer, 'status', 'Processing Linked Documents')
